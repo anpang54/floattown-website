@@ -1,9 +1,15 @@
 
+
+/* body */
+
 body{
     font-family: "Work Sans", sans-serif;
     margin: 0;
     background-color: #c9e5ff;
 }
+
+
+/* header */
 
 #header{
     position: fixed;
@@ -40,8 +46,25 @@ button:active{
 }
 #sourcecode{ float: right; }
 
+
+/* main */
+
 #main{
     position: fixed;
     top: 7em;
     left: 2em;
 }
+#mainscroll{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page{
+    position: absolute;
+    top: 0;
+}
+#home{ left: 0; }
+#key{ left: 100vw; }
+#buildings{ left: 200vw; }
+#pictures{ left: 300vw; }

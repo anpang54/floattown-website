@@ -11,14 +11,27 @@
 <body>
     <div id="header">
         <h1>Floattown</h1>
-        <button>Home</button>
-        <button>Key</button>
-        <button>Buildings</button>
-        <button>Pictures</button>
+        <button onclick="go('home')">Home</button>
+        <button onclick="go('key')">Key</button>
+        <button onclick="go('buildings')">Buildings</button>
+        <button onclick="go('pictures')">Pictures</button>
         <button id="sourcecode">Source code</button>
     </div>
     <div id="main">
-        Hello
+        <div id="mainscroll">
+            <div id="home" class="page">
+                home
+            </div>
+            <div id="key" class="page">
+                key
+            </div>
+            <div id="buildings" class="page">
+                buildings
+            </div>
+            <div id="pictures" class="page">
+                pictures
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
