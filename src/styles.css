@@ -1,0 +1,47 @@
+
+body{
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    background-color: #c9e5ff;
+}
+
+#header{
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    width: calc(100vw - 6em);
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 1em 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+h1{
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0 1em 0 0;
+    transform: translateY(0.1em);
+}
+
+button{
+    font-family: "Work Sans", sans-serif;
+    background-color: #c2e2ff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+    margin-right: 0.5em;
+}
+button:active{
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+#sourcecode{ float: right; }
+
+#main{
+    position: fixed;
+    top: 7em;
+    left: 2em;
+}
