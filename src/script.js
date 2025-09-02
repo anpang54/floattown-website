@@ -27,7 +27,7 @@ function go(page) {
         } else {
             ++i;
         }
-    }, 3);
+    }, 1);
 
     currentPage = page;
 
