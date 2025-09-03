@@ -8,7 +8,6 @@ body{
     background-image: url(assets/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: lighten;
 }
 
@@ -24,15 +23,60 @@ body{
     padding: 1em 2em;
     border-radius: 1em;
     box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
 }
 
-h1{
+#title{
     display: inline-block;
     font-size: 1.5em;
     margin: 0 2em 0 1em;
     transform: translateY(0.1em);
     border-bottom: 3px solid rgba(255, 255, 255, 0.75);
 }
+
+
+/* main */
+
+#main{
+    position: fixed;
+    top: 6em;
+    left: 1em;
+    width: calc(100vw - 2em);
+    height: calc(100vh - 7em);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1em;
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+}
+
+#mainscroll{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 2em;
+}
+
+.page{
+    position: absolute;
+    top: 0;
+    width: calc(100% - 4em);
+}
+#home{ left: 0; }
+#key{ left: 100vw; }
+#friends{ left: 200vw; }
+#pictures{ left: 300vw; }
+#history{ left: 400vw; }
+#other-stuff{ left: 500vw; }
+
+#hometitle{ font-size: 2em; }
+h2{
+    font-size: 1.75em;
+    line-height: 1em;
+}
+
+
+/* elements */
 
 button{
     font-family: "Work Sans", sans-serif;
@@ -51,34 +95,9 @@ button.pressed, button:active{
 }
 #sourcecode{ float: right; }
 
-
-/* main */
-
-#main{
-    position: fixed;
-    top: 6em;
-    left: 1em;
-    width: calc(100vw - 2em);
-    height: calc(100vh - 7em);
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 1em;
-    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+a{
+    color: #0048ff;
+    text-decoration: none;
+    display: inline-block;
 }
-
-#mainscroll{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 2em;
-}
-
-.page{
-    position: absolute;
-    top: 0;
-}
-#home{ left: 0; }
-#key{ left: 100vw; }
-#buildings{ left: 200vw; }
-#pictures{ left: 300vw; }
-#other-stuff{ left: 400vw; }
+a:hover{ transform: scale(1.05); }
