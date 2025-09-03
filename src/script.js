@@ -10,12 +10,12 @@ function id(name) {
 // page colors
 
 const colors = {
-    "home": 10,
+    "home": 204,
     "key": 130,
     "friends": 60,
     "pictures": 277,
     "history": 305,
-    "other-stuff": 204
+    "other-stuff": 10
 };
 
 
@@ -42,14 +42,15 @@ function go(page) {
         if(i === 100) {
             clearInterval(interval);
             id("mainscroll").style.transform = `translateX(-${end}px)`;
+            
+            // set color
+            document.body.style.backgroundColor = `hsla(${colors[page]}deg, 100%, 95%, 0.75)`;
+        
         } else {
             ++i;
         }
     }, 1);
 
-    // set color
-    document.body.style.backgroundColor = `hsla(${colors[page]}deg, 100%, 95%, 0.75)`;
-    
     // set page
     currentPage = page;
 
