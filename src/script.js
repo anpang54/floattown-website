@@ -17,6 +17,9 @@ function go(page) {
     const end = parseFloat(window.getComputedStyle(id(page)).getPropertyValue("left").slice(0, -2));
     let value = start;
 
+    id(`button-${currentPage}`).classList.remove("pressed");
+    id(`button-${page}`).classList.add("pressed");
+
     let i = 0;
     let interval = setInterval(() => {
         value += (end - start) / 100;
@@ -32,3 +35,5 @@ function go(page) {
     currentPage = page;
 
 }
+
+go("home");
