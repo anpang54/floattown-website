@@ -57,3 +57,38 @@ function go(page) {
 }
 
 go("home");
+
+
+// key filter
+
+const allFilters = ["buildings", "canals", "transversals"];
+let currentFilters = {
+    "buildings": true,
+    "canals": true,
+    "transversals": true
+}
+
+function filter(page) {
+
+    // toggle button
+    if(page === "all") {
+        for(const filter of allFilters) {
+            currentFilters[filter] = true;
+        }
+    } else {
+        currentFilters[page] = !currentFilters[page];
+    }
+
+    // update buttons
+    for(const filter of allFilters) {
+        if(currentFilters[filter]) {
+            id(`filter-${filter}`).classList.add("pressed");
+        } else {
+            id(`filter-${filter}`).classList.remove("pressed");
+        }
+    }
+
+}
+
+filter("all");
+
