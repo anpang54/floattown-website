@@ -24,14 +24,41 @@ body{
     border-radius: 1em;
     box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(2px);
+    white-space: nowrap;
 }
 
 #title{
-    display: inline-block;
     font-size: 1.5em;
-    margin: 0 2em 0 1em;
     transform: translateY(0.1em);
     border-bottom: 3px solid rgba(255, 255, 255, 0.75);
+}
+
+#buttons{
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    padding-bottom: 0.5em;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media all and (min-width: 1000px) {
+    #title{
+        display: inline-block;
+        margin: 0 2em 0 1em;
+    }
+    #buttons{
+        display: inline;
+    }
+    #sourcecode{ float: right; }
+}
+@media all and (max-width: 1000px) {
+    #title{
+        display: block;
+        text-align: center;
+        margin: 0 0 0.5em 0;
+    }
 }
 
 
@@ -39,15 +66,26 @@ body{
 
 #main{
     position: fixed;
-    top: 6em;
     left: 1em;
     width: calc(100vw - 2em);
-    height: calc(100vh - 7em);
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 1em;
     box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.15);
     overflow: hidden;
     backdrop-filter: blur(2px);
+}
+
+@media all and (min-width: 1000px) {
+    #main{
+        top: 6em;
+        height: calc(100vh - 7em);
+    }
+}
+@media all and (max-width: 1000px) {
+    #main{
+        top: 10em;
+        height: calc(100vh - 11em);
+    }
 }
 
 #mainscroll{
@@ -100,14 +138,15 @@ button.pressed, button:active{
     transform: translate(3px, 3px);
     box-shadow: none;
 }
-#sourcecode{ float: right; }
+button:hover{ transform: scale(1.05); }
+button.pressed:hover, button:active:hover{ transform: translate(3px, 3px) scale(1.05); }
 
 a{
     color: #0048ff;
     text-decoration: none;
     display: inline-block;
 }
-a:not(#sourcecode):hover, button:hover:not(.pressed):not(:active){ transform: scale(1.05); }
+a:not(#sourcecode):hover{ transform: scale(1.05); }
 
 h2{
     font-size: 1.75em;
