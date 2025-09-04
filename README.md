@@ -1,6 +1,6 @@
 
-# City project website
+# Floattown website
 
-A static website for my math city project.
+A static website to present my math city project, Floattown.
 
 Polyform NonCommercial 1.0
