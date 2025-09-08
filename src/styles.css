@@ -71,7 +71,7 @@ body{
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 1em;
     box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    overflow-x: hidden;
     backdrop-filter: blur(2px);
 }
 
@@ -105,7 +105,7 @@ body{
 #friends{ left: 200vw; }
 #pictures{ left: 300vw; }
 #history{ left: 400vw; }
-#other-stuff{ left: 500vw; }
+#statistics{ left: 500vw; }
 
 
 /* pages */
@@ -151,4 +151,11 @@ a:not(#sourcecode):hover{ transform: scale(1.05); }
 h2{
     font-size: 1.75em;
     line-height: 1em;
+}
+h3{ font-size: 1.5em; }
+
+hr{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1em;
+    margin: 1.5em 0.25em;
 }

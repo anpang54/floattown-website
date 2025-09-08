@@ -15,7 +15,7 @@ const colors = {
     "friends": 60,
     "pictures": 277,
     "history": 305,
-    "other-stuff": 10
+    "statistics": 10
 };
 
 
@@ -30,6 +30,11 @@ function go(page) {
     const end = parseFloat(window.getComputedStyle(id(page)).getPropertyValue("left").slice(0, -2));
     let value = start;
 
+    // get start/end values for color
+    const colorStart = colors[currentPage];
+    const colorEnd = colors[page];
+    let colorValue = colorStart;
+
     // keep button pressed
     id(`button-${currentPage}`).classList.remove("pressed");
     id(`button-${page}`).classList.add("pressed");
@@ -37,18 +42,29 @@ function go(page) {
     // do animation
     let i = 0;
     let interval = setInterval(() => {
-        value += (end - start) / 100;
+
+        // set values
+        if(start < end) {
+            value += (end - start) / 100;
+        } else {
+            value -= (end - start) / 100;
+        }
+        colorValue += (colorEnd - colorStart) / 100;
+
+        // update
         id("mainscroll").style.transform = `translateX(-${value}px)`;
+        document.body.style.backgroundColor = `hsla(${colorValue}deg, 100%, 95%, 0.75)`;
         if(i === 100) {
             clearInterval(interval);
+
+            // set final distance and color
             id("mainscroll").style.transform = `translateX(-${end}px)`;
-            
-            // set color
-            document.body.style.backgroundColor = `hsla(${colors[page]}deg, 100%, 95%, 0.75)`;
+            document.body.style.backgroundColor = `hsla(${colorEnd}deg, 100%, 95%, 0.75)`;
         
         } else {
             ++i;
         }
+
     }, 1);
 
     // set page
