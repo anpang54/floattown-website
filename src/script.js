@@ -68,6 +68,9 @@ function go(page) {
 
     }, 1);
 
+    // set scroll
+    id("main").scrollTop = 0;
+
     // set page
     currentPage = page;
 
