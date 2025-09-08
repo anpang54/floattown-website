@@ -17,6 +17,7 @@ const colors = {
     "history": 305,
     "statistics": 10
 };
+const pages = Object.keys(colors);
 
 
 // switch page
@@ -44,10 +45,10 @@ function go(page) {
     let interval = setInterval(() => {
 
         // set values
-        if(start < end) {
-            value += (end - start) / 100;
-        } else {
+        if(pages.indexOf(start) < pages.indexOf(end)) {
             value -= (end - start) / 100;
+        } else {
+            value += (end - start) / 100;
         }
         colorValue += (colorEnd - colorStart) / 100;
 
