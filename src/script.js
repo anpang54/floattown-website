@@ -77,11 +77,13 @@ go("home");
 
 // key filter
 
-const allFilters = ["buildings", "canals", "transversals"];
+const allFilters = ["buildings", "canals", "transversals", "friends", "relationships"];
 let currentFilters = {
     "buildings": true,
     "canals": true,
-    "transversals": true
+    "transversals": true,
+    "friends": true,
+    "relationships": true
 }
 
 function filter(page) {
