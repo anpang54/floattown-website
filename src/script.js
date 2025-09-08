@@ -12,7 +12,7 @@ function id(name) {
 const colors = {
     "home": 204,
     "key": 130,
-    "friends": 60,
+    "buildings": 60,
     "pictures": 277,
     "history": 305,
     "statistics": 10
