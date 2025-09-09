@@ -13,7 +13,7 @@ const colors = {
     "home": 204,
     "key": 130,
     "buildings": 60,
-    "pictures": 277,
+    "friends": 277,
     "history": 305,
     "statistics": 10
 };
