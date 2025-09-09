@@ -14,8 +14,7 @@ const colors = {
     "key": 130,
     "buildings": 60,
     "friends": 277,
-    "history": 305,
-    "statistics": 10
+    "history": 305
 };
 const pages = Object.keys(colors);
 
