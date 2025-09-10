@@ -80,13 +80,12 @@ go("home");
 
 // key filter
 
-const allFilters = ["buildings", "canals", "transversals", "friends", "relationships"];
+const allFilters = ["buildings", "canals", "transversals", "relationships"];
 let currentFilters = {
-    "buildings": true,
-    "canals": true,
-    "transversals": true,
-    "friends": true,
-    "relationships": true
+    "buildings": false,
+    "canals": false,
+    "transversals": false,
+    "relationships": false,
 }
 
 function filter(page) {
@@ -100,16 +99,18 @@ function filter(page) {
         currentFilters[page] = !currentFilters[page];
     }
 
-    // update buttons
+    // update layers and buttons
     for(const filter of allFilters) {
         if(currentFilters[filter]) {
+            id(`key-${filter}`).style.display = "block";
             id(`filter-${filter}`).classList.add("pressed");
         } else {
+            id(`key-${filter}`).style.display = "none";
             id(`filter-${filter}`).classList.remove("pressed");
         }
     }
 
 }
 
-filter("all");
-
+filter("buildings");
+filter("relationships");
